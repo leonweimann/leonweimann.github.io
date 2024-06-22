@@ -1,4 +1,88 @@
+:root {
+    --background-color-light: #F4F6F7;
+    --background-color-dark: #1f1f1f;
+
+    --background-color-accent-light: #f8f9fa;
+    --background-color-accent-dark: #181818;
+
+    --color-light: #0e0e0e;
+    --color-dark: #e0e0e0;
+
+    --color-accent: #579ce0;
+}
+
 body {
     font-family: "Avenir Next";
-    background-color: rgb(245, 246, 247);
+    background-color: var(--background-color-light);
+    transition: background-color 0.3s, color 0.3s;
+    padding: 0;
+    margin: 0;
+}
+
+section {
+    background-color: var(--background-color-accent-light);
+    border-radius: 1em;
+    padding: 1em;
+    text-align: center;
+    margin: 1em;
+}
+
+nav {
+    background-color: var(--background-color-accent-light);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img {
+    height: 3.5em;
+    border-radius: 1em;
+    margin: .5rem;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 0 1em;
+}
+
+nav a {
+    letter-spacing: .2em;
+}
+
+a {
+    font-weight: 600;
+    color: var(--color-light);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--color-accent);
+    transition: color 0.3s;
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: var(--background-color-dark);
+        color: var(--color-dark);
+    }
+
+    section {
+        background-color: var(--background-color-accent-dark);
+    }
+
+    nav {
+        background-color: var(--background-color-accent-dark);
+    }
+    
+    a {
+        color: var(--color-dark);
+    }
+}
+
+.accent {
+    color: var(--color-accent);
 }
